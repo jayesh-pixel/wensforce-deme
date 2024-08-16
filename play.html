@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <title>Fantra - Online Lotto & Lottery HTML Template</title>
+
+    <title>Digiton</title>
 
 
 
@@ -58,7 +59,9 @@
                                     <a href="#" class="custom-button1" data-toggle="modal"
                                         data-target="#registerModal">Register</a>
                                     <a href="#" class="custom-button2" data-toggle="modal" data-target="#loginModal">Log
-                                        In</a>
+                                        In</a>&nbsp;&nbsp;
+                                        <a href="#" class="custom-button1">Download App</a>
+
                                 </div>
                             
                             </div>
@@ -78,7 +81,7 @@
                             <a href="single-lottery.html">Lottery</a>
                         </li> -->
                         <li>
-                            <a href="result.html" class="active">Results</a>
+                            <a href="play.html" class="active">HOW TO PLAY</a>
                         </li>
                         <li>
                             <a href="about.html">About</a>
@@ -188,7 +191,7 @@
     <!-- Register Area -->
 
     <!-- Login Area -->
-    <div class="modal fade log-reg-modal-wrapper log" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade log-reg-modal-wrapper log" id="loginModal" tabindex="-1" aria-hidden="true" method="post">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
@@ -197,7 +200,7 @@
                     </div>
                     <div class="log-reg-inner">
                         <h2 class="title">
-                            Welcome to Fantra
+                            Welcome to Digiton
                         </h2>
                         <div class="main-content">
                             <form action="#">
@@ -244,7 +247,7 @@
         <div class="container">
             <div class="content">
                 <h2 class="title">
-                    Results
+                    HOW TO PLAY
                 </h2>
                 <ul class="breadcrumb-list extra-padding">
                     <li>
@@ -254,7 +257,7 @@
                     </li>
 
                     <li>
-                        <a href="#">Results</a>
+                        <a href="#">HOW TO PLAY</a>
                     </li>
                 </ul>
             </div>
@@ -269,193 +272,94 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="image">
-                            <img src="assets/images/result.jpg" alt="">
+                            <img src="assets/images/download.png" alt="" style="border-radius: 10%;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="check-number result-page">
+        <!--added play section and edited them-->
+        <div class="play-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="check-box">
-                            <h4 class="title">1. Select a Game</h4>
-                            <div class="form-area">
-                                <select>
-                                    <option value="#">Power Ball</option>
-                                    <option value="#">Megamillions</option>
-                                    <option value="#">Euromillions</option>
-                                </select>
+                    <!-- Image with Text Overlay -->
+                    <div class="col-sm-4 pt-5">
+                        <div class="image-container">
+                            <img src="assets/images/w1.png">
+                            <div class="overlay">
+                                <div class="overlay-text">WELCOME TO DIGITON</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="check-box">
-                            <h4 class="title">2. Pick a Date</h4>
-                            <div class="form-area">
-                                <input type="date">
+                    <div class="col-sm-4 pt-5">
+                        <div class="image-container">
+                            <img src="assets/images/w2.jpg">
+                            <div class="overlay">
+                                <div class="overlay-text">Login To Your Account OR Create An Account</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="check-box">
-                            <h4 class="title">3. Enter Your Number</h4>
-                            <div class="form-area input-round-wrapper">
-                                <input type="text" class="input-round">
-                                <input type="text" class="input-round">
-                                <input type="text" class="input-round">
-                                <input type="text" class="input-round">
-                                <input type="text" class="input-round">
-                                <input type="text" class="input-round">
+                    <div class="col-sm-4 pt-5">
+                        <div class="image-container">
+                            <img src="assets/images/w3.jpg">
+                            <div class="overlay">
+                                <div class="overlay-text">Start To Play The Game</div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="lottery-result result-page">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="result-list">
-                            <div class="single-list">
-                                <div class="light-area">
-                                    <div class="light-area-top">
-                                        <div class="left">
-                                            <img src="assets/images/d1.png" alt="">
-                                            <h4>Powerball</h4>
-                                        </div>
-                                        <div class="right">
-                                            <span>Draw took place on</span>
-                                            <h6>Saturday April 20, 2020</h6>
-                                        </div>
-                                    </div>
-                                    <div class="light-area-bottom">
-                                        <div class="left">
-                                            <p>Winning Numbers:</p>
-                                            <div class="numbers">
-                                                <span>11</span>
-                                                <span>88</span>
-                                                <span>23</span>
-                                                <span>9</span>
-                                                <span>19</span>
-                                                <span>26</span>
-                                                <span>87</span>
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                            <span>Est. Jackpot</span>
-                                            <h6>$116 M Win BTC</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="color-area">
-                                    <div class="top">
-                                        <span>Next Draw</span>
-                                        <h6>Wed, Oct 28, 2020</h6>
-                                    </div>
-                                    <div class="bottom">
-                                        <span>Est. Jackpot </span>
-                                        <h6>$116 M Win BTC</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-list">
-                                <div class="light-area">
-                                    <div class="light-area-top">
-                                        <div class="left">
-                                            <img src="assets/images/d2.png" alt="">
-                                            <h4>Megamillions</h4>
-                                        </div>
-                                        <div class="right">
-                                            <span>Draw took place on</span>
-                                            <h6>Saturday April 20, 2020</h6>
-                                        </div>
-                                    </div>
-                                    <div class="light-area-bottom">
-                                        <div class="left">
-                                            <p>Winning Numbers:</p>
-                                            <div class="numbers">
-                                                <span>11</span>
-                                                <span>88</span>
-                                                <span>23</span>
-                                                <span>9</span>
-                                                <span>19</span>
-                                                <span>26</span>
-                                                <span>87</span>
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                            <span>Est. Jackpot</span>
-                                            <h6>$116 M Win BTC</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="color-area">
-                                    <div class="top">
-                                        <span>Next Draw</span>
-                                        <h6>Wed, Oct 28, 2020</h6>
-                                    </div>
-                                    <div class="bottom">
-                                        <span>Est. Jackpot </span>
-                                        <h6>$116 M Win BTC</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-list">
-                                <div class="light-area">
-                                    <div class="light-area-top">
-                                        <div class="left">
-                                            <img src="assets/images/d3.png" alt="">
-                                            <h4>Euromillions</h4>
-                                        </div>
-                                        <div class="right">
-                                            <span>Draw took place on</span>
-                                            <h6>Saturday April 20, 2020</h6>
-                                        </div>
-                                    </div>
-                                    <div class="light-area-bottom">
-                                        <div class="left">
-                                            <p>Winning Numbers:</p>
-                                            <div class="numbers">
-                                                <span>11</span>
-                                                <span>88</span>
-                                                <span>23</span>
-                                                <span>9</span>
-                                                <span>19</span>
-                                                <span>26</span>
-                                                <span>87</span>
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                            <span>Est. Jackpot</span>
-                                            <h6>$116 M Win BTC</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="color-area">
-                                    <div class="top">
-                                        <span>Next Draw</span>
-                                        <h6>Wed, Oct 28, 2020</h6>
-                                    </div>
-                                    <div class="bottom">
-                                        <span>Est. Jackpot </span>
-                                        <h6>$116 M Win BTC</h6>
-                                    </div>
-                                </div>
+                    <div class="col-sm-4 pt-5">
+                        <div class="image-container">
+                            <img src="assets/images/w4.jpg">
+                            <div class="overlay">
+                                <div class="overlay-text">View Your Transaction History</div>
                             </div>
                         </div>
-                        <div class="text-center">
-                            <a class="view-all" href="#">Load more </a>
+                    </div>
+                    <div class="col-sm-4 pt-5">
+                        <div class="image-container">
+                            <img src="assets/images/ww5.jpg">
+                            <div class="overlay">
+                                <div class="overlay-text">Your Wallet Account</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 pt-5">
+                        <div class="image-container">
+                            <img src="assets/images/ww6.jpg">
+                            <div class="overlay">
+                                <div class="overlay-text">Winning History</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 pt-5">
+                        <div class="image-container">
+                            <img src="assets/images/ww7.jpg">
+                            <div class="overlay">
+                                <div class="overlay-text">My History</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 pt-5">
+                        <div class="image-container">
+                            <img src="assets/images/ww8.jpg">
+                            <div class="overlay">
+                                <div class="overlay-text">Wallet</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 pt-5">
+                        <div class="image-container">
+                            <img src="assets/images/w9.jpg">
+                            <div class="overlay">
+                                <div class="overlay-text">Withdraw Cash</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>       
     </section>
-    <!-- ==========Results-Section========== -->
-
+    <br>
     <!-- ==========Newslater-Section========== -->
     <footer class="footer-section">
         <div class="container">
@@ -474,19 +378,13 @@
                             <div class="right">
                                 <ul class="links">
                                     <li>
-                                        <a href="#">About</a>
+                                        <a href="about.html">About</a>
                                     </li>
                                     <li>
-                                        <a href="#">FAQs</a>
+                                        <a href="faq.html">FAQs</a>
                                     </li>
                                     <li>
-                                        <a href="#">Contact</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Terms of Service</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Privacy</a>
+                                        <a href="contact.html">Contact</a>
                                     </li>
                                 </ul>
                             </div>
