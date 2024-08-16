@@ -929,3 +929,11 @@
         line-height: 40px;
     }
 }
+
+@media (max-width: 768px) {
+.color-area img{
+    padding-right: 120px;
+    width: 270px;
+    height: 190px;
+}
+}

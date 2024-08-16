@@ -1,6 +1,4 @@
-/*  jQuery Nice Select - v1.0
-    https://github.com/hernansartorio/jquery-nice-select
-    Made by HernÃ¡n Sartorio  */
+
 ! function (e) {
     e.fn.niceSelect = function (t) {
         function s(t) {
