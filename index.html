@@ -15,10 +15,11 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Digiton</title>
 </head>
-
 <body>
+    <!-- home page edited changes made in login form changes made in images -->
     <!-- ==========Preloader========== -->
     <div class="preloader">
         <div class="preloader-inner">
@@ -39,7 +40,7 @@
 
     <!-- ==========Header-Section========== -->
     <header class="top-header">
-        <div class="header-top-area">
+        <!-- <div class="header-top-area">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -49,32 +50,32 @@
                             </a>
                             <div class="right-area">
                                 <div class="log-reg-area">
-                                    <!-- <a href="#" class="custom-button1" data-toggle="modal"
-                                        data-target="#registerModal">Register</a> -->
                                     <a href="#" class="custom-button2" data-toggle="modal" data-target="#loginModal">Log
                                         In</a>&nbsp;&nbsp;
-                                        <!-- <a href="#" class="custom-button1">Download App</a> -->
                                 </div>
-                        
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="header-section ">
+        <div class="header-section">
             <div class="container">
                 <div class="header-wrapper">
-                    <ul class="menu" id="mobile-menu-btn">
+                    <ul class="menu">
+                        <li><img src="assets/images/digitonlogo.png" class="logo" height="200" width="100"></li>
                         <li>
                             <a href="index.html" class="active">Home</a>
                         </li>
+                        <!-- <li>
+                            <a href="single-lottery.html">Lottery</a>
+                        </li> -->
                         <li>
                             <a href="play.html">HOW TO PLAY</a>
                         </li>
                         <li>
-                            <a href="about.html">About</a>
+                            <a href="about.html" >About</a>
                         </li>
                         <li>
                             <a href="faq.html">Faq</a>
@@ -82,82 +83,37 @@
                         <li>
                             <a href="contact.html">Contact</a>
                         </li>
-                        <li>  <a href="#" class="custom-button1">Download App</a></li>
+                        <li>                
+                        <a href="#" class="custom-button1">Download App</a>                             
+                        </li>
+                            <div class="right-area">
+                                <div class="log-reg-area">
+                                    <a href="#" class="custom-button2" data-toggle="modal" data-target="#authModal">Log
+                                        In</a>&nbsp;&nbsp;
+                                </div>
+                                <!-- <div class="log-reg-area">
+                                    <a href="#" class="custom-button1" data-toggle="modal" data-target="#registerModal">Register
+                                        In</a>&nbsp;&nbsp;
+                                </div> -->
+                                </div>
+                            </div>
                     </ul>
                     <div class="right-tools">
-                        <!-- <select class="select-bar"> -->
-                            <!-- <option value="">BTC</option>
-                            <option value="">BDT</option>
-                            <option value="">USD</option> -->
-                        </select>
-                        <!-- <select class="select-bar"> -->
-                            <!-- <option value="">EN</option>
-                            <option value="">IN</option>
-                            <option value="">BN</option> -->
-                        </select>
                     </div>
-                    <div class="right-tools">
                         <div class="header-bar d-lg-none">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
                 </div>
-            </div>
-        </div>
-        
-    </header>
-    <!-- Register Area -->
-  <!-- Register Modal -->
-<!-- <div class="modal fade log-reg-modal-wrapper" id="registerModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="log-reg-inner">
-                    <h2 class="title">Create an Account</h2>
-                    <div class="main-content">
-                        <form action="/register" method="POST">
-                            <div class="form-group">
-                                <label>Your Email</label>
-                                <input type="email" name="email" class="my-form-control" placeholder="Enter Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" name="password" class="my-form-control" placeholder="Enter Your Password" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Confirm Password</label>
-                                <input type="password" name="confirm_password" class="my-form-control" placeholder="Confirm Your Password" required>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1" required>
-                                <label class="custom-control-label" for="customCheck1">I agree to the <a href="#">Terms, Privacy Policy, and Fees</a></label>
-                            </div>
-                            <div class="button-wrapper">
-                                <button type="submit" class="custom-button2">Register Now</button>
-                                <p class="or-signup">
-                                    Already have an account? <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
-                                </p>
-                            </div>
-                            <div class="or"><p>OR</p></div>
-                            <div class="socials">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-google"></i></a>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div> -->
-
-<!-- Login Modal -->
-<div class="modal fade log-reg-modal-wrapper log" id="loginModal" tabindex="-1" aria-hidden="true">
+    </header>
+  
+    <!--changes made in form-->
+<!-- Combined Modal -->
+<div class="modal fade log-reg-modal-wrapper" id="authModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
@@ -165,28 +121,67 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="log-reg-inner">
-                    <h2 class="title">Welcome to Digiton</h2>
-                    <div class="main-content">
-                        <form action="/login" method="POST">
-                            <div class="form-group">
-                                <label>Your Email</label>
-                                <input type="email" name="email" class="my-form-control" placeholder="Enter Your Email" required>
+                    <ul class="nav nav-tabs" id="authTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="authTabContent">
+                        <!-- Login Form -->
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <h2 class="title">Welcome to Digiton</h2>
+                            <div class="main-content">
+                                <form id="loginForm" action="/login" method="POST" onsubmit="return validateLoginForm()">
+                                    <div class="form-group">
+                                        <label style="color: white;">Your Email</label>
+                                        <input type="email" name="email" class="my-form-control" id="email" placeholder="Enter Your Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label style="color: white;">Password</label>
+                                        <input type="password" name="password" id="password" class="my-form-control" placeholder="Enter Your Password" required>
+                                    </div>
+                                    <p class="f-pass" style="color: white;">Forgot your password? <a href="#" style="color: white;">recover password</a></p>
+                                    <div class="button-wrapper">
+                                        <button type="submit" class="custom-button2">Sign In</button>
+                                    </div>
+                                    <div class="or log"><p>OR</p></div>
+                                    <p class="or-signup">Don't have an account? <a href="#register" class="nav-link" data-toggle="tab">Sign up here</a></p>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" name="password" class="my-form-control" placeholder="Enter Your Password" required>
+                        </div>
+
+                        <!-- Register Form -->
+                        <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                            <h2 class="title">Create an Account</h2>
+                            <div class="main-content">
+                                <form id="registerForm" action="/register" method="POST" onsubmit="return validateRegisterForm()">
+                                    <div class="form-group">
+                                        <label style="color: white;">Username</label>
+                                        <input type="text" name="name" class="my-form-control" placeholder="Enter Your Username" required>
+                                        <br><br>
+                                        <label style="color: white;">Your Email</label>
+                                        <input type="email" name="email" class="my-form-control" placeholder="Enter Your Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label style="color: white;">Password</label>
+                                        <input type="password" name="password" class="my-form-control" placeholder="Enter Your Password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label style="color: white;">Confirm Password</label>
+                                        <input type="password" name="confirm_password" class="my-form-control" placeholder="Confirm Your Password" required>
+                                    </div>
+                                    <div class="button-wrapper">
+                                        <button type="submit" class="custom-button2" style="color: white;">Register Now</button>
+                                        <p class="or-signup" style="color: white;">
+                                            Already have an account? <a href="#login" class="nav-link" data-toggle="tab">Login</a>
+                                        </p>
+                                    </div>
+                                </form>
                             </div>
-                            <p class="f-pass">Forgot your password? <a href="#">recover password</a></p>
-                            <div class="button-wrapper">
-                                <button type="submit" class="custom-button2">Sign In</button>
-                            </div>
-                            <div class="or log"><p>OR</p></div>
-                            <div class="or-content">
-                                <p>Sign up with your email</p>
-                                <a href="#" class="or-btn"><img src="assets/images/google.png" alt=""> Sign Up with Google</a>
-                                <p class="or-signup">Don't have an account? <a href="#" data-toggle="modal" data-target="#registerModal">Sign up here</a></p>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,8 +189,9 @@
     </div>
 </div>
 
+
     <!-- Login Area -->
-    <!-- ==========Header-Section========== -->
+  
 
     <!-- ==========Banner-Section========== -->
      <!--edited banner image-->
@@ -216,6 +212,7 @@
     <!-- ==========Banner-Section========== -->
 
     <!-- ==========Draw-Section========== -->
+
      <!--created images and edited them-->
      <section class="draw-section">
         <div class="container">
@@ -303,38 +300,17 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="item">
-                            <div class="single-draw">
-                                <img class="overlay" src="assets/images/overlaymask3.png" alt="">
-                                <div class="icon">
-                                    <img src="assets/images/d3.png" alt="">
-                                </div>
-                                <h4>
-                                    $211 Million
-                                    Win BTC
-                                </h4>
-                                <a href="#" class="custom-button1">Play Now</a>
-                                <div class="next-draw">
-                                    <span class="text">Next Draw :</span>
-                                    <div class="time">
-                                        <img src="assets/images/time.png" alt="">
-                                        <h6 class="time-countdown" data-countdown="01/05/2021"></h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-   
-    <!-- ==========Feature-Section========== -->
 
-    <!-- ==========Features-Section========== -->
+
+  
 
     <!-- ==========Lottery-Result-Section========== -->
-     <!--added images and edited them-->
+        <!--added new images-->
     <section class="lottery-result">
         <img class="bg-image" src="assets/images/result-background.jpg" alt="">
         <div class="container">
@@ -366,42 +342,40 @@
                                         </div>
                                         <div class="right">
                                             <span>Count Down</span>
-                                            <!-- <h6>00:29</h6> -->
                                         </div>
                                     </div>
                                     <div class="light-area-bottom">
                                         <div class="left">
-                                            <p>Even / Odd</p>
+                                            <p>Big / Small</p>
                                             <div class="numbers">
+                                                <span>5</span>
+                                                <span>6</span>
+                                                <span>7</span>
+                                                <span>8</span>
+                                                <span>9</span><br>
+                                                <br>
                                                 <span>0</span>
                                                 <span>1</span>
                                                 <span>2</span>
                                                 <span>3</span>
-                                                <span>4</span><br>
-                                                <br>
-                                                <!-- <span>5</span>
-                                                <span>6</span>
-                                                <span>7</span>
-                                                <span>8</span>
-                                                <span>9</span> -->
+                                                <span>4</span>
                                             </div>
                                         </div>
                                         <div class="right">
                                             <div class="left">
-                                                <!-- <p>Big / Small</p> -->
                                                 <div class="numbers">
                                                     <p>Even / Odd</p>
                                                     <span>5</span>
-                                                    <span>6</span>
-                                                    <span>7</span>
-                                                    <span>8</span>
-                                                    <span>9</span><br>
+                                                    <span>5</span>
+                                                    <span>4</span>
+                                                    <span>4</span>
+                                                    <span>4</span><br>
                                                     <br>
-                                                    <!-- <span>0</span>
-                                                    <span>1</span>
+                                                    <span>0</span>
                                                     <span>2</span>
-                                                    <span>3</span>
-                                                    <span>4</span> -->
+                                                    <span>4</span>
+                                                    <span>6</span>
+                                                    <span>8</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -409,11 +383,9 @@
                                 </div>
                                 <div class="color-area text-center">
                                     <div class="top">
-                                      <img src="assets/images/winnn.png" height="200" width="180">
+                                      <img src="assets/images/bigwin.png" height="270" width="190" class="winbox">
                                     </div>
                                     <div class="bottom">
-                                        <!-- <span>Est. Jackpot </span>
-                                        <h6>$116 M Win BTC</h6> -->
                                     </div>
                                 </div>
                             </div>
@@ -431,20 +403,20 @@
                                     </div>
                                     <div class="light-area-bottom">
                                         <div class="left">
-                                            <p>Even / Odd</p>
+                                            <p>Big / Small</p>
                                             <div class="numbers">
                                         
-                                                <span>0</span>
-                                                <span>2</span>
-                                                <span>4</span>
-                                                <span>6</span>
-                                                <span>8</span><br>
-                                                <br>
-                                                <!-- <span>1</span>
-                                                <span>3</span>
                                                 <span>5</span>
+                                                <span>6</span>
                                                 <span>7</span>
-                                                <span>9</span> -->
+                                                <span>8</span>
+                                                <span>9</span><br>
+                                                <br>
+                                                <span>0</span>
+                                                <span>1</span>
+                                                <span>2</span>
+                                                <span>3</span>
+                                                <span>4</span>
                                             </div>
                                         </div>
                                         <div class="right">
@@ -452,17 +424,17 @@
                                                 <!-- <p>Big / Small</p> -->
                                                 <div class="numbers">
                                                     <p>Even / Odd</p>
+                                                    <span>1</span>
+                                                    <span>3</span>
                                                     <span>5</span>
-                                                    <span>6</span>
                                                     <span>7</span>
-                                                    <span>8</span>
                                                     <span>9</span><br>
                                                     <br>
-                                                    <!-- <span>0</span>
-                                                    <span>1</span>
+                                                    <span>0</span>
                                                     <span>2</span>
-                                                    <span>3</span>
-                                                    <span>4</span> -->
+                                                    <span>4</span>
+                                                    <span>6</span>
+                                                    <span>8</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -470,7 +442,7 @@
                                 </div>
                                 <div class="color-area text-center">
                                     <div class="top">
-                                        <img src="assets/images/1minn.png" height="270" width="290">
+                                        <img src="assets/images/win1.png" height="400" width="170" class="win1">
                                     </div>
                                     <div class="bottom">
                                         <!-- <span>Est. Jackpot </span>
@@ -492,19 +464,19 @@
                                     </div>
                                     <div class="light-area-bottom">
                                         <div class="left">
-                                            <p>Even / Odd</p>
+                                            <p>Big / Small</p>
                                             <div class="numbers">
-                                                <span>0</span>
-                                                <span>2</span>
-                                                <span>4</span>
-                                                <span>6</span>
-                                                <span>8</span><br>
-                                                <br>
-                                                <!-- <span>1</span>
-                                                <span>3</span>
                                                 <span>5</span>
+                                                <span>6</span>
                                                 <span>7</span>
-                                                <span>9</span> -->
+                                                <span>8</span>
+                                                <span>9</span><br>
+                                                <br>
+                                                <span>0</span>
+                                                <span>1</span>
+                                                <span>2</span>
+                                                <span>3</span>
+                                                <span>4</span>
                                             </div>
                                         </div>
                                         <div class="right">
@@ -512,17 +484,17 @@
                                                 <!-- <p>Big / Small</p> -->
                                                 <div class="numbers">
                                                     <p>Even / Odd</p>
+                                                    <span>1</span>
+                                                    <span>3</span>
                                                     <span>5</span>
-                                                    <span>6</span>
                                                     <span>7</span>
-                                                    <span>8</span>
                                                     <span>9</span><br>
                                                     <br>
-                                                    <!-- <span>0</span>
-                                                    <span>1</span>
+                                                    <span>0</span>
                                                     <span>2</span>
-                                                    <span>3</span>
-                                                    <span>4</span> -->
+                                                    <span>4</span>
+                                                    <span>6</span>
+                                                    <span>8</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -530,13 +502,8 @@
                                 </div>
                                 <div class="color-area">
                                     <div class="top">
-                                        <img src="assets/images/newimg1.png" height="260" width="260">
-                                        <!-- <span>Next Draw</span>
-                                        <h6>Wed, Oct 28, 2020</h6>
-                                    </div>
-                                    <div class="bottom">
-                                        <span>Est. Jackpot </span>
-                                        <h6>$116 M Win BTC</h6> -->
+                                        <img src="assets/images/win3.png" height="400" width="170" class="win1">
+                                     
                                     </div>
                                 </div>
                             </div>
@@ -554,19 +521,19 @@
                                     </div>
                                     <div class="light-area-bottom">
                                         <div class="left">
-                                            <p>Even / Odd</p>
+                                            <p>Big/ Small</p>
                                             <div class="numbers">
-                                                <span>0</span>
-                                                <span>2</span>
-                                                <span>4</span>
-                                                <span>6</span>
-                                                <span>8</span><br>
-                                                <br>
-                                                <!-- <span>1</span>
-                                                <span>3</span>
                                                 <span>5</span>
+                                                <span>6</span>
                                                 <span>7</span>
-                                                <span>9</span> -->
+                                                <span>8</span>
+                                                <span>9</span><br>
+                                                <br>
+                                                <span>0</span>
+                                                <span>1</span>
+                                                <span>2</span>
+                                                <span>3</span>
+                                                <span>4</span>
                                             </div>
                                         </div>
                                         <div class="right">
@@ -574,17 +541,17 @@
                                                 <!-- <p>Big / Small</p> -->
                                                 <div class="numbers">
                                                     <p>Even / Odd</p>
+                                                    <span>1</span>
+                                                    <span>3</span>
                                                     <span>5</span>
-                                                    <span>6</span>
                                                     <span>7</span>
-                                                    <span>8</span>
                                                     <span>9</span><br>
                                                     <br>
-                                                    <!-- <span>0</span>
-                                                    <span>1</span>
+                                                    <span>0</span>
                                                     <span>2</span>
-                                                    <span>3</span>
-                                                    <span>4</span> -->
+                                                    <span>4</span>
+                                                    <span>6</span>
+                                                    <span>8</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -592,7 +559,7 @@
                                 </div>
                                 <div class="color-area text-center">
                                     <div class="top">
-                                        <img src="assets/images/newimg1.png" height="260" width="260">
+                                        <img src="assets/images/win15.png" height="400" width="170" class="win1">
                                     </div>
                                     <div class="bottom">
                                         <!-- <span>Est. Jackpot </span>
@@ -610,7 +577,7 @@
         </div>
     </section>
     <!-- ==========Lottery-Result-Section========== -->
-    <section class="features-section">
+    <section class="features-section pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -651,14 +618,14 @@
   
 
     <!-- ==========Check-Number-Section========== -->
-    <section class="check-number">
+    <section class="check-number mb-5">
         <img class="img-left" src="assets/images/check-num-left.png" alt="">
         <img class="img-right" src="assets/images/check-num-right.png" alt="">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-9">
+                <div class="col-lg-9 ">
                     <div class="content">
-                        <div class="section-header">
+                        <div class="section-header ">
                             <h2 class="title">
                                 Check your date
                             </h2>
@@ -683,7 +650,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 ">
                     <div class="check-box">
                         <h4 class="title">2. Pick a Date</h4>
                         <div class="form-area">
@@ -691,7 +658,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 ">
                     <div class="check-box">
                         <h4 class="title">3. Winning Number</h4>
                         <div class="form-area input-round-wrapper">
@@ -735,12 +702,6 @@
                                     <li>
                                         <a href="contact.html">Contact</a>
                                     </li>
-                                    <!-- <li>
-                                        <a href="#">Terms of Service</a>
-                                    </li> -->
-                                    <!-- <li>
-                                        <a href="#">Privacy</a>
-                                    </li> -->
                                 </ul>
                             </div>
                         </div>
@@ -759,7 +720,7 @@
                             <span>
                                 Copyright © 2024.All Rights Reserved By
                             </span>
-                            <a href="#">Digiton</a>
+                            <a href="index.html">Digiton</a>
                         </div>
                     </div>
                     <div class="col-lg-6 align-self-center">
@@ -804,7 +765,4 @@
     <script src="assets/js/nice-select.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
-
-
-<!-- Mirrored from pixner.net/fantra/fantra/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Aug 2024 14:05:19 GMT -->
 </html>

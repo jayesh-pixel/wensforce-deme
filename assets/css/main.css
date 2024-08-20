@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /*
-  Theme Name:  Bittery - Online Lotto & Lottery HTML Template
-  Version: 1.0
+  
 */
 /*
 ************************************
@@ -1361,8 +1360,8 @@ input[type=submit] {
  height: 90px;
 }
 .header-wrapper .logo {
-  width: 120px;
-  height: 60px;
+  width: 90px;
+  height: 80px;
 }
 .header-wrapper .logo a {
   display: inline-block;
@@ -1915,6 +1914,7 @@ input[type=submit] {
 /* Lottery-Result-Section Starts Here*/
 .lottery-result {
   position: relative;
+  cursor: pointer;
 }
 .lottery-result .section-header {
   margin-bottom: 40px;
@@ -3997,37 +3997,156 @@ input[type=submit] {
 }
 
 .play-section {
-  padding: 30px 0;
-  background-color: #f8f9fa;
+  padding: 10px 0;
+  background-color: #f0f2f5;
 }
 
 .play-section h5 {
-  font-size: 24px;
+  font-size: 20px;
   color: #333;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out;
 }
 
 .play-section .img-fluid {
   max-width: 50%;
   height: 300px;
-  border-radius: 10px;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .play-section .col-sm-5 {
+  background-color: #fff;
   background-image: url('../images/newdesign.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  padding: 15px;
+  padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  
- 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.play-section .col-sm-5:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.play-section .col-sm-5:hover .img-fluid {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .play-section .col-sm-5 h5 {
-  margin-top: 20px;
-  font-family: inherit;
+  margin-top: 15px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .play-section .img-fluid {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .play-section {
+      padding: 30px 10px;
+  }
+
+  .play-section h5 {
+      font-size: 18px;
+  }
+}
+
+.counter-area-inner {
+  padding: 20px 0;
+}
+
+.c-box {
+  padding: 10px;
+  text-align: center;
+ display: none;
+}
+
+.c-box img.icon {
+ display: none;
+}
+
+@media (max-width: 767px) {
+  .counter-area-inner {
+      padding: 15px 0;
+  }
+
+  .c-box img.icon {
+      height: auto;
+      width: 80%;
+  }
+}
+
+
+
+
+
+@media (max-width: 576px) {
+  .numbers span {
+      flex: 1 1 10%; 
+  }
+}
+
+.modal-content{
+  background-color: #6c0092;
+}
+
+.nav-item a{
+  color: white;
+  background-image: linear-gradient(7deg, #ec1379 0%, #6c0092 100%);
+  gap: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tab-pane{
+  gap: 20px;
+}
+
+.tab-pane h2{
+  color: white;
+  padding-top: 20px;
+}
+
+.or, .or-signup{
+  color: white;
+}
+
+.nav-link{
+  background-image: linear-gradient(7deg, #ec1379 0%, #6c0092 100%);
+  margin: 0px 0px;
+  color: white;
+}
+
+.close{
+  padding-bottom: 90px;
+  color: white;
+}
+
+.close :hover{
+  color: yellow;
+  padding: 0px;
+  border: none;
+}
+
+.log-reg-inner{
+  gap: 20px;
+  padding: 10px;
+}
+
+.nav-tabs{
+  gap: 20px;
   color: white;
 }
 

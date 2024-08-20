@@ -209,3 +209,29 @@ document.getElementById('mobile-menu-toggle').addEventListener('click', function
     var menu = document.getElementById('mobile-menu-btn');
     menu.classList.toggle('show');
 });
+
+
+
+/*changes made in form*/
+
+function validateRegisterForm() {
+    const password = document.querySelector('input[name="password"]').value;
+    const confirmPassword = document.querySelector('input[name="confirm_password"]').value;
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return false; 
+    }
+    return true; 
+}
+
+function validateLoginForm() {
+    const email = document.querySelector('#loginForm input[name="email"]').value;
+    const password = document.querySelector('#loginForm input[name="password"]').value;
+
+    if (email === "" || password === "") {
+        alert("Both email and password are required!");
+        return false; 
+    }
+    return true;
+}
