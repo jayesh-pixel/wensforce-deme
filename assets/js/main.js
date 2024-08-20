@@ -204,3 +204,8 @@ setInterval(function(){
         counter = 1;
     }
 }, 5000);
+
+document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+    var menu = document.getElementById('mobile-menu-btn');
+    menu.classList.toggle('show');
+});

@@ -49,21 +49,13 @@
                             </a>
                             <div class="right-area">
                                 <div class="log-reg-area">
-                                    <a href="#" class="custom-button1" data-toggle="modal"
-                                        data-target="#registerModal">Register</a>
+                                    <!-- <a href="#" class="custom-button1" data-toggle="modal"
+                                        data-target="#registerModal">Register</a> -->
                                     <a href="#" class="custom-button2" data-toggle="modal" data-target="#loginModal">Log
                                         In</a>&nbsp;&nbsp;
-                                        <a href="#" class="custom-button1">Download App</a>
+                                        <!-- <a href="#" class="custom-button1">Download App</a> -->
                                 </div>
-                                <!-- <div class="cart-area">
-                                    <div class="icon">
-                                        <img src="assets/images/cart.png" alt="">
-                                        <span>06</span>
-                                    </div> -->
-                                    <!-- <div class="amount">
-                                        <h4 class="mony">$ 23.60</h4>
-                                        <p>To checkout</p>
-                                    </div> -->
+                        
                                 </div>
                             </div>
                         </div>
@@ -74,7 +66,7 @@
         <div class="header-section ">
             <div class="container">
                 <div class="header-wrapper">
-                    <ul class="menu ">
+                    <ul class="menu" id="mobile-menu-btn">
                         <li>
                             <a href="index.html" class="active">Home</a>
                         </li>
@@ -90,6 +82,7 @@
                         <li>
                             <a href="contact.html">Contact</a>
                         </li>
+                        <li>  <a href="#" class="custom-button1">Download App</a></li>
                     </ul>
                     <div class="right-tools">
                         <!-- <select class="select-bar"> -->
@@ -103,131 +96,104 @@
                             <option value="">BN</option> -->
                         </select>
                     </div>
-                    <!-- <div class="header-bar d-lg-none"> -->
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                    <div class="right-tools">
+                        <div class="header-bar d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                 </div>
             </div>
         </div>
         
     </header>
     <!-- Register Area -->
-    <div class="modal fade log-reg-modal-wrapper" id="registerModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </div>
-                    <div class="log-reg-inner">
-                        <h2 class="title">
-                            Create an Account
-                        </h2>
-                        <div class="main-content">
-                            <form action="#">
-                                <div class="form-group">
-                                    <label>Your Email</label>
-                                    <input type="email" class="my-form-control" placeholder="Enter Your Email">
-                                </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="text" class="my-form-control" placeholder="Enter Your Password">
-                                </div>
-                                <div class="form-group">
-                                    <label>Confirm Password</label>
-                                    <input type="text" class="my-form-control"
-                                        placeholder="Enter Your Confirm Password">
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">
-                                        I agree to the <a href="#">Terms, Privacy Policy and Fees</a>
-                                    </label>
-                                </div>
-                                <div class="button-wrapper">
-                                    <button type="submit" class="custom-button2">Register Now</button>
-                                    <p class="or-signup">
-                                        Already have an account? <a href="#" data-toggle="modal"
-                                            data-target="#loginModal">
-                                            Login
-                                        </a>
-                                        <!--added download-->
-                                    </p>
-                                </div>
-                                <div class="or">
-                                    <p>OR</p>
-                                </div>
-                                <div class="socials">
-                                    <a href="#">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fab fa-google"></i>
-                                    </a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Register Area -->
-
-    <!-- Login Area -->
-    <div class="modal fade log-reg-modal-wrapper log" id="loginModal" tabindex="-1" aria-hidden="true" method="post">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </div>
-                    <div class="log-reg-inner">
-                        <h2 class="title">
-                            Welcome to Digiton
-                        </h2>
-                        <div class="main-content">
-                            <form action="#">
-                                <div class="form-group">
-                                    <label>Your Email</label>
-                                    <input type="email" class="my-form-control" placeholder="Enter Your Email">
-                                </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="text" class="my-form-control" placeholder="Enter Your Password">
-                                </div>
-                                <p class="f-pass">
-                                    Forgot your password? <a href="#">recover password</a>
+  <!-- Register Modal -->
+<!-- <div class="modal fade log-reg-modal-wrapper" id="registerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="log-reg-inner">
+                    <h2 class="title">Create an Account</h2>
+                    <div class="main-content">
+                        <form action="/register" method="POST">
+                            <div class="form-group">
+                                <label>Your Email</label>
+                                <input type="email" name="email" class="my-form-control" placeholder="Enter Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" name="password" class="my-form-control" placeholder="Enter Your Password" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <input type="password" name="confirm_password" class="my-form-control" placeholder="Confirm Your Password" required>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1" required>
+                                <label class="custom-control-label" for="customCheck1">I agree to the <a href="#">Terms, Privacy Policy, and Fees</a></label>
+                            </div>
+                            <div class="button-wrapper">
+                                <button type="submit" class="custom-button2">Register Now</button>
+                                <p class="or-signup">
+                                    Already have an account? <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
                                 </p>
-                                <div class="button-wrapper">
-                                    <button type="submit" class="custom-button2">Sign In</button>
-                                </div>
-                                <div class="or log">
-                                    <p>OR</p>
-                                </div>
-                                <div class="or-content">
-                                    <p>Sign up with your email</p>
-                                    <a href="#" class="or-btn"><img src="assets/images/google.png" alt=""> Sign Up with
-                                        Google</a>
-                                    <p class="or-signup">
-                                        Don't have an account? <a href="#" data-toggle="modal"
-                                            data-target="#registerModal">
-                                            Sign up here
-                                        </a>
-                                    </p>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="or"><p>OR</p></div>
+                            <div class="socials">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-google"></i></a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div> -->
+
+<!-- Login Modal -->
+<div class="modal fade log-reg-modal-wrapper log" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="log-reg-inner">
+                    <h2 class="title">Welcome to Digiton</h2>
+                    <div class="main-content">
+                        <form action="/login" method="POST">
+                            <div class="form-group">
+                                <label>Your Email</label>
+                                <input type="email" name="email" class="my-form-control" placeholder="Enter Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" name="password" class="my-form-control" placeholder="Enter Your Password" required>
+                            </div>
+                            <p class="f-pass">Forgot your password? <a href="#">recover password</a></p>
+                            <div class="button-wrapper">
+                                <button type="submit" class="custom-button2">Sign In</button>
+                            </div>
+                            <div class="or log"><p>OR</p></div>
+                            <div class="or-content">
+                                <p>Sign up with your email</p>
+                                <a href="#" class="or-btn"><img src="assets/images/google.png" alt=""> Sign Up with Google</a>
+                                <p class="or-signup">Don't have an account? <a href="#" data-toggle="modal" data-target="#registerModal">Sign up here</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- Login Area -->
     <!-- ==========Header-Section========== -->
 
@@ -237,7 +203,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="banner-subtitle">Exclusive Lottery </p>
+                    <p class="banner-subtitle">Welcome To Digiton Club </p>
                     <h1 class="banner-title">
                        MEGA CONTEST
                     </h1>
@@ -251,7 +217,7 @@
 
     <!-- ==========Draw-Section========== -->
      <!--created images and edited them-->
-    <section class="draw-section">
+     <section class="draw-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -362,47 +328,9 @@
             </div>
         </div>
     </section>
+   
     <!-- ==========Feature-Section========== -->
 
-    <!-- ==========Features-Section========== -->
-    <section class="features-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="single-feature">
-                        <div class="icon">
-                            <img src="assets/images/f1.png" alt="">
-                        </div>
-                        <h4 class="title">Trust</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="single-feature">
-                        <div class="icon">
-                            <img src="assets/images/f2.png" alt="">
-                        </div>
-                        <h4 class="title">Safe & Security</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="single-feature">
-                        <div class="icon">
-                            <img src="assets/images/f3.png" alt="">
-                        </div>
-                        <h4 class="title">Easy To Use</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="single-feature">
-                        <div class="icon">
-                            <img src="assets/images/f4.png" alt="">
-                        </div>
-                        <h4 class="title">24/7 Support</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- ==========Features-Section========== -->
 
     <!-- ==========Lottery-Result-Section========== -->
@@ -427,7 +355,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="result-box">
-                        <h4 class="box-header">Lottery Winning Numbers</h4>
+                        <h4 class="box-header"></h4>
                         <div class="result-list">
                             <div class="single-list">
                                 <div class="light-area">
@@ -682,6 +610,45 @@
         </div>
     </section>
     <!-- ==========Lottery-Result-Section========== -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-feature">
+                        <div class="icon">
+                            <img src="assets/images/f1.png" alt="">
+                        </div>
+                        <h4 class="title">Trust</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-feature">
+                        <div class="icon">
+                            <img src="assets/images/f2.png" alt="">
+                        </div>
+                        <h4 class="title">Safe & Security</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-feature">
+                        <div class="icon">
+                            <img src="assets/images/f3.png" alt="">
+                        </div>
+                        <h4 class="title">Easy To Use</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-feature">
+                        <div class="icon">
+                            <img src="assets/images/f4.png" alt="">
+                        </div>
+                        <h4 class="title">24/7 Support</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
 
     <!-- ==========Check-Number-Section========== -->
     <section class="check-number">
