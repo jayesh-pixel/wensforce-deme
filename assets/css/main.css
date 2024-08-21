@@ -1435,6 +1435,13 @@ input[type=submit] {
   }
 
 }
+
+
+
+
+
+
+
 @media (min-width: 992px) {
   .header-wrapper .menu {
     display: -webkit-box;
@@ -4088,65 +4095,448 @@ input[type=submit] {
   }
 }
 
-
-
-
-
 @media (max-width: 576px) {
   .numbers span {
       flex: 1 1 10%; 
   }
 }
 
-.modal-content{
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
   background-color: #6c0092;
-}
-
-.nav-item a{
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
   color: white;
-  background-image: linear-gradient(7deg, #ec1379 0%, #6c0092 100%);
-  gap: 20px;
-  font-size: 20px;
-  font-weight: bold;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  animation: modalFadeIn 0.5s ease-in-out;
 }
 
-.tab-pane{
-  gap: 20px;
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.tab-pane h2{
+.close {
+  position: absolute;
+  top: 10px;
+  left: 170px;
+  font-size: 1.5rem;
   color: white;
-  padding-top: 20px;
+  cursor: pointer;
+  margin-bottom: 60px;
 }
 
-.or, .or-signup{
-  color: white;
-}
-
-.nav-link{
-  background-image: linear-gradient(7deg, #ec1379 0%, #6c0092 100%);
-  margin: 0px 0px;
-  color: white;
-}
-
-.close{
-  padding-bottom: 90px;
-  color: white;
-}
-
-.close :hover{
-  color: yellow;
+.close:hover{
   padding: 0px;
   border: none;
 }
 
-.log-reg-inner{
-  gap: 20px;
-  padding: 10px;
+/* Form Wrapper Styling */
+.form-wrapper {
+  padding: 20px 0;
 }
 
-.nav-tabs{
-  gap: 20px;
+/* Tab Navigation Styling */
+.nav-tabs {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  
+}
+
+.nav-item .nav-link {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #555;
+  transition: color 0.3s ease;
+  /* background-image: linear-gradient(0deg, #f4ba2e 0%, #fea036 100%); */
+  background-color: white;
+  border-radius: 8px 8px 0 0;
+ margin-bottom: 10px;
+}
+
+.nav-link.active, .nav-link:hover {
+  
+  /* background-image: linear-gradient(0deg, #f4ba2e 0%, #fea036 100%); */
+  background-color: white;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Form Content Styling */
+.form-content {
+  display: none;
+}
+
+.form-content.active {
+  display: block;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
   color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 5px;
+  display: block;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+/* Button Styling */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-image: linear-gradient(0deg, #f4ba2e 0%, #fea036 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 30px; /* Adjust this value to fit the icon inside the input */
+}
+
+.password-wrapper .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.password-wrapper .toggle-password:hover {
+  color: #333;
+}
+
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .modal-content {
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 1.4rem;
+  }
+
+  .form-group label, .form-control, .btn {
+      font-size: 0.85rem;
+  }
+}
+
+
+.color-area {
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  padding: 20px;          
+ 
+}
+
+.top {
+  max-width: 100%;         
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+}
+
+.win1 {
+  max-width: 100%;         
+  height: auto;         
+  display: block;          
+  border-radius: 8px;      
+ 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .win1 {
+      max-width: 80%;     
+  }
+}
+
+.contest {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  position: relative;
+  background-image: url('../images/result-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.box1 {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.confetti-video {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+h1.display-4 {
+  font-size: 2.5rem;
+  color: #28a745;
+}
+
+h3.display-5 {
+  font-size: 2rem;
+  color: #ffc107;
+}
+
+.check-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-round {
+  border: 2px solid #dee2e6;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 60px;
+}
+
+.text-primary {
+  color: #007bff;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+.text-warning {
+  color: #ffc107;
+}
+
+.img-fluid {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.right-video {
+  height: 60px;
+  width: 60px;
+  transform: scaleX(-1); /* Flip the video horizontally */
+}
+
+/* Animation for Congratulations */
+.animate-congrats {
+  position: relative;
+  display: inline-block;
+  animation: bounce 2s infinite, glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 10px #28a
+  }
+}
+
+.carousel-control-next-icon{
+  color: black;
+}
+
+.carousel-item {
+  margin: 0; /* Remove extra margin */
+}
+
+.carousel-inner {
+  margin: 0; /* Remove extra margin */
+}
+
+.carousel-inner h1{
+  padding-top: 20px;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+  font-weight: 700;
+}
+
+
+
+
+.video-wrapper {
+  display: flex;
+  justify-content: center; /* Center videos horizontally */
+}
+
+.confetti-video {
+  width: 100%; /* Adjust width as needed */
+}
+
+.img-fluid {
+  max-width: 100%; /* Ensure image scales properly */
+}
+
+.box1 {
+  margin: 0; /* Remove extra margin */
+}
+
+.check-box {
+  margin: 0; /* Remove extra margin */
+}
+
+/* Basic reset for button */
+.chat-button {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  z-index: 1000;
+}
+
+.btn-chat {
+  display: inline-block;
+  padding: 15px 20px;
+  background-image: linear-gradient(0deg, #f4ba2e 0%, #fea036 100%);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-chat:hover {
+  background-image: linear-gradient(0deg, #f4ba2e 0%, #fea036 100%);
+    box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Chat Window Styles */
+.chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+    border-radius: 10px;
+    display: none; /* Initially hidden */
+    z-index: 9999;
+  }
+
+  .chat-window header {
+      background: #0072ff;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
+
+  .chat-window .content {
+      padding: 10px;
+      height: 300px;
+      overflow-y: auto;
+  }
+
+  .chat-window .chat-send {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-window .chat-send input {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.chat-window .chat-send button {
+    background: #0072ff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
