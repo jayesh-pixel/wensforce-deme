@@ -86,11 +86,11 @@
                         <li>                
                         <a href="#" class="custom-button1">Download App</a>                             
                         </li>
-                            <div class="right-area">
-                                <div class="log-reg-area">
-                                    <a href="#" class="custom-button2" data-toggle="modal" data-target="#loginModal">Log
-                                        In</a>&nbsp;&nbsp;
-                                </div>
+                        <div class="right-area">
+                            <div class="log-reg-area">
+                                <a href="#" class="custom-button2" onclick="openModal()">Log In</a>&nbsp;&nbsp;
+                            </div>
+                        </div>
                                 </div>
                             </div>
                     </ul>
@@ -106,120 +106,81 @@
             </div>
         </div>
     </header>
-    <!-- Register Area -->
-    <div class="modal fade log-reg-modal-wrapper" id="registerModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <div class="form-login">
+        <div id="authModal" class="modal">
             <div class="modal-content">
                 <div class="modal-body">
-                    <div class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </div>
-                    <div class="log-reg-inner">
-                        <h2 class="title">
-                            Create an Account
-                        </h2>
-                        <div class="main-content">
-                            <form action="#">
+                    <button class="close" onclick="closeModal()">×</button>
+                    <div class="form-wrapper">
+                        <ul class="nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" onclick="openForm('login')">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="openForm('register')">Register</a>
+                            </li>
+                        </ul>
+                        <div id="login-form" class="form-content active">
+                            <h2>Login !</h2>
+                            <form onsubmit="return validateLoginForm()">
                                 <div class="form-group">
-                                    <label>Your Email</label>
-                                    <input type="email" class="my-form-control" placeholder="Enter Your Email">
+                                    <label for="login-email">Email</label>
+                                    <input type="email" id="login-email" class="form-control" placeholder="Enter Your Email" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="text" class="my-form-control" placeholder="Enter Your Password">
+                                
+                                    <label for="login-password">Password</label>
+                                    <input type="password" id="login-password" class="form-control" placeholder="Enter Your Password" required>
+                                    <span class="toggle-password" onclick="togglePassword('login-password')">
+                                     
+                                    </span>
+                                </div>
+                                
+                                <button type="submit" class="btn">Login</button>
+                            </form>
+                        </div>
+                        <div id="register-form" class="form-content">
+                            <h2>Register</h2>
+                            <form onsubmit="return validateRegisterForm()">
+                                <div class="form-group">
+                                    <label for="register-username">Username</label>
+                                    <input type="text" id="register-username" class="form-control" placeholder="Enter Your Username" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Confirm Password</label>
-                                    <input type="text" class="my-form-control"
-                                        placeholder="Enter Your Confirm Password">
+                                    <label for="register-email">Email</label>
+                                    <input type="email" id="register-email" class="form-control" placeholder="Enter Your Email" required>
                                 </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">
-                                        I agree to the <a href="#">Terms, Privacy Policy and Fees</a>
-                                    </label>
+                                <div class="form-group">
+                                    <label for="register-password">Password</label>
+                                    <div class="password-wrapper">
+                                    <input type="password" id="register-password" class="form-control" placeholder="Enter Your Password" required>
+                                    <span class="toggle-password" onclick="togglePassword('register-password')">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                    </div>
                                 </div>
-                                <div class="button-wrapper">
-                                    <button type="submit" class="custom-button2">Register Now</button>
-                                    <p class="or-signup">
-                                        Already have an account? <a href="#" data-toggle="modal"
-                                            data-target="#loginModal">
-                                            Login
-                                        </a>
-                                    </p>
+                                <div class="form-group">
+                                    <label for="login-password">Password</label>
+                                    <div class="password-wrapper">
+                                        <input type="password" id="login-password" class="form-control" placeholder="Enter Your Password" required>
+                                        <span class="toggle-password" onclick="togglePassword('login-password')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="or">
-                                    <p>OR</p>
+                                <div class="form-group">
+                                    <label for="referral-code">Referral Code (Optional)</label>
+                                    <input type="text" id="referral-code" class="form-control" placeholder="Enter Referral Code">
                                 </div>
-                                <div class="socials">
-                                    <a href="#">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fab fa-google"></i>
-                                    </a>
-                                </div>
+                                <button type="submit" class="btn">Register</button>
+                                
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Register Area -->
-
-    <!-- Login Area -->
-    <div class="modal fade log-reg-modal-wrapper log" id="loginModal" tabindex="-1" aria-hidden="true" method="post">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </div>
-                    <div class="log-reg-inner">
-                        <h2 class="title">
-                            Welcome to Digiton
-                        </h2>
-                        <div class="main-content">
-                            <form action="#">
-                                <div class="form-group">
-                                    <label>Your Email</label>
-                                    <input type="email" class="my-form-control" placeholder="Enter Your Email">
-                                </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="text" class="my-form-control" placeholder="Enter Your Password">
-                                </div>
-                                <p class="f-pass">
-                                    Forgot your password? <a href="#">recover password</a>
-                                </p>
-                                <div class="button-wrapper">
-                                    <button type="submit" class="custom-button2">Sign In</button>
-                                </div>
-                                <div class="or log">
-                                    <p>OR</p>
-                                </div>
-                                <div class="or-content">
-                                    <p>Sign up with your email</p>
-                                    <a href="#" class="or-btn"><img src="assets/images/google.png" alt=""> Sign Up with
-                                        Google</a>
-                                    <p class="or-signup">
-                                        Don't have an account? <a href="#" data-toggle="modal"
-                                            data-target="#registerModal">
-                                            Sign up here
-                                        </a>
-                                    </p>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
     <!-- Login Area -->
     <!-- ==========Header-Section========== -->
 
@@ -549,12 +510,6 @@
                                     <li>
                                         <a href="contact.html">Contact</a>
                                     </li>
-                                    <!-- <li>
-                                        <a href="#">Terms of Service</a>
-                                    </li> -->
-                                    <!-- <li>
-                                        <a href="#">Privacy</a>
-                                    </li> -->
                                 </ul>
                             </div>
                         </div>
@@ -579,25 +534,26 @@
                     <div class="col-lg-6 align-self-center">
                         <ul class="footer-social-links">
                             <li>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
+                                <a href="https://www.linkedin.com/company/digitonclub/">
+                                    <i class="fab fa-linkedin"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="https://www.facebook.com/people/DigitOn-Club/61558524436004/">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="https://www.instagram.com/digitonclub/">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="fab fa-dribbble"></i>
+                                <a href="https://www.youtube.com/@DigitOnClub">
+                                    <i class="fab fa-youtube"></i>
                                 </a>
                             </li>
+                           
                         </ul>
                     </div>
                 </div>

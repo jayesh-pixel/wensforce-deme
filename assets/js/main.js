@@ -211,27 +211,105 @@ document.getElementById('mobile-menu-toggle').addEventListener('click', function
 });
 
 
+// Switch between login and register forms
+// Open the modal
+function openModal() {
+    document.getElementById('authModal').style.display = 'flex';
+}
 
-/*changes made in form*/
+// Close the modal
+function closeModal() {
+    document.getElementById('authModal').style.display = 'none';
+}
 
+// Switch between login and register forms
+function openForm(formName) {
+    document.getElementById('login-form').classList.remove('active');
+    document.getElementById('register-form').classList.remove('active');
+
+    if (formName === 'login') {
+        document.getElementById('login-form').classList.add('active');
+    } else {
+        document.getElementById('register-form').classList.add('active');
+    }
+}
+
+// Validate login form
+function validateLoginForm() {
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+
+    if (!email || !password) {
+        alert('Please fill in all fields.');
+        return false;
+    }
+
+    alert('Login successful');
+    return true; // submit form
+}
+
+// Validate register form
 function validateRegisterForm() {
-    const password = document.querySelector('input[name="password"]').value;
-    const confirmPassword = document.querySelector('input[name="confirm_password"]').value;
+    const username = document.getElementById('register-username').value;
+    const email = document.getElementById('register-email').value;
+    const password = document.getElementById('register-password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+
+    if (!username || !email || !password || !confirmPassword) {
+        alert('Please fill in all fields.');
+        return false;
+    }
 
     if (password !== confirmPassword) {
-        alert("Passwords do not match!");
-        return false; 
+        alert('Passwords do not match.');
+        return false;
     }
-    return true; 
+
+    alert('Registration successful');
+    return true; // submit form
 }
 
-function validateLoginForm() {
-    const email = document.querySelector('#loginForm input[name="email"]').value;
-    const password = document.querySelector('#loginForm input[name="password"]').value;
+// var captchaResponse = grecaptcha.getResponse();
+// if (captchaResponse.length === 0) {
+//     alert('Please complete the CAPTCHA');
+//     return false;
+// }
+// alert('Registration successful');
+// return true; 
 
-    if (email === "" || password === "") {
-        alert("Both email and password are required!");
-        return false; 
+function togglePassword(id) {
+    var passwordField = document.getElementById(id);
+    var toggleIcon = passwordField.nextElementSibling.querySelector('i');
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleIcon.classList.remove("fa-eye");
+        toggleIcon.classList.add("fa-eye-slash");
+    } else {
+        passwordField.type = "password";
+        toggleIcon.classList.remove("fa-eye-slash");
+        toggleIcon.classList.add("fa-eye");
     }
-    return true;
 }
+
+
+
+document.querySelector('.header-bar').addEventListener('click', function() {
+    document.querySelector('.menu').classList.toggle('show');
+})
+
+
+document.getElementById('chatBtn').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    var chatWindow = document.getElementById('chatWindow');
+    if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+        chatWindow.style.display = 'block';
+    } else {
+        chatWindow.style.display = 'none';
+    }
+});
+
+// import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+// function party(){
+//     confetti()
+// }
+// document.getElementById('confetti').addEventListener('click',MEGA );
