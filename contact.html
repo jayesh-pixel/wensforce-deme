@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-popover-x.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <title>Digiton</title>
+</head>
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+    <header class="top-header">
+        <!-- <div class="header-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header-top-area-inner">
+                            <a href="index.html" class="logo">
+                                <img src="assets/images/digitonlogo.png" alt="" height="100" width="100">
+                            </a>
+                            <div class="right-area">
+                                <div class="log-reg-area">
+                                    <a href="#" class="custom-button2" data-toggle="modal" data-target="#loginModal">Log
+                                        In</a>&nbsp;&nbsp;
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="header-section">
+            <div class="container">
+                <div class="header-wrapper">
+                    <ul class="menu">
+                        <li><img src="assets/images/digitonlogo.png" class="logo" height="200" width="100"></li>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <!-- <li>
+                            <a href="single-lottery.html">Lottery</a>
+                        </li> -->
+                        <li>
+                            <a href="play.html">HOW TO PLAY</a>
+                        </li>
+                        <li>
+                            <a href="about.html" >About</a>
+                        </li>
+                        <li>
+                            <a href="faq.html">Faq</a>
+                        </li>
+                        <li>
+                            <a href="contact.html"  class="active">Contact</a>
+                        </li>
+                        <li>                
+                        <a href="#" class="custom-button1">Download App</a>                             
+                        </li>
+                        <div class="right-area">
+                            <div class="log-reg-area">
+                                <a href="#" class="custom-button2" onclick="openModal()">Log In</a>&nbsp;&nbsp;
+                            </div>
+                        </div>
+                            </div>
+                    </ul>
+                    <div class="right-tools">
+                    </div>
+                        <div class="header-bar d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="form-login">
+        <div id="authModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close" onclick="closeModal()">×</button>
+                    <div class="form-wrapper">
+                        <ul class="nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" onclick="openForm('login')">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="openForm('register')">Register</a>
+                            </li>
+                        </ul>
+                        <div id="login-form" class="form-content active">
+                            <h2>Login !</h2>
+                            <form onsubmit="return validateLoginForm()">
+                                <div class="form-group">
+                                    <label for="login-email">Email</label>
+                                    <input type="email" id="login-email" class="form-control" placeholder="Enter Your Email" required>
+                                </div>
+                                <div class="form-group">
+                                
+                                    <label for="login-password">Password</label>
+                                    <input type="password" id="login-password" class="form-control" placeholder="Enter Your Password" required>
+                                    <span class="toggle-password" onclick="togglePassword('login-password')">
+                                     
+                                    </span>
+                                </div>
+                                
+                                <button type="submit" class="btn">Login</button>
+                            </form>
+                        </div>
+                        <div id="register-form" class="form-content">
+                            <h2>Register</h2>
+                            <form onsubmit="return validateRegisterForm()">
+                                <div class="form-group">
+                                    <label for="register-username">Username</label>
+                                    <input type="text" id="register-username" class="form-control" placeholder="Enter Your Username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-email">Email</label>
+                                    <input type="email" id="register-email" class="form-control" placeholder="Enter Your Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-password">Password</label>
+                                    <div class="password-wrapper">
+                                    <input type="password" id="register-password" class="form-control" placeholder="Enter Your Password" required>
+                                    <span class="toggle-password" onclick="togglePassword('register-password')">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="login-password">Password</label>
+                                    <div class="password-wrapper">
+                                        <input type="password" id="login-password" class="form-control" placeholder="Enter Your Password" required>
+                                        <span class="toggle-password" onclick="togglePassword('login-password')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="referral-code">Referral Code (Optional)</label>
+                                    <input type="text" id="referral-code" class="form-control" placeholder="Enter Referral Code">
+                                </div>
+                                <button type="submit" class="btn">Register</button>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    <!-- ==========Header-Section========== -->
+
+    <!-- ==========Breadcrumb-Section========== -->
+    <section class="breadcrumb-area">
+        <img class="contact" src="assets/images/contact-b-icon.png" alt="">
+        <div class="container">
+            <div class="content">
+                <h2 class="title">
+                    Contact
+                </h2>
+                <ul class="breadcrumb-list extra-padding">
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Breadcrumb-Section========== -->
+
+    <!-- ==========Contact-Section========== -->
+    <section class="contact">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-lg-7">
+                    <div class="contact-box">
+                        <h4 class="title">
+                            Get In Touch
+                        </h4>
+                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <input name="access_key" value="213f8a3f-7907-4b36-897b-c5015520a3c8" type="hidden">
+                                <label>Your Name</label>
+                                <input type="text" name="name" placeholder="Enter Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Your Email</label>
+                                <input type="email" name="email" placeholder="Enter Your Email">
+                            </div>
+                            <div class="form-group last">
+                                <label>Your Message</label>
+                                <textarea name="message" placeholder="Enter Your Message"></textarea>
+                            </div>
+                            <!-- <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1" name="subscribe">
+                                <label class="custom-control-label" for="customCheck1">I agree to receive emails, newsletters and promotional messages</label>
+                            </div> -->
+                            <button type="submit" class="custom-button1">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- ==========Contact-Section========== -->
+
+    <!-- ==========Newslater-Section========== -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-links">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-top-area">
+                            <div class="left">
+                                <a href="#">
+                                    <img src="assets/images/app_store_btn.png" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="assets/images/goole_play_btn.png" alt="">
+                                </a>
+                            </div>
+                            <div class="right">
+                                <ul class="links">
+                                    <li>
+                                        <a href="about.html">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html">FAQs</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <hr class="hr2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="copyr-text">
+                            <span>
+                                Copyright © 2024.All Rights Reserved By
+                            </span>
+                            <a href="index.html">Digiton</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 align-self-center">
+                        <ul class="footer-social-links">
+                            <li>
+                                <a href="https://www.linkedin.com/company/digitonclub/">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/people/DigitOn-Club/61558524436004/">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/digitonclub/">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@DigitOnClub">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ==========Newslater-Section========== -->
+    <!-- All js link starts hear -->
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/bootstrap-popover-x.min.js"></script>
+    <script src="assets/js/amd.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
