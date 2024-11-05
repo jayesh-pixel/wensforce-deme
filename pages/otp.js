@@ -1,19 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useLocation, useNavigate } from "react-router-dom"; // Get phone number from location state
+import { useRouter } from "next/router"; // Use useRouter from Next.js
 
 const OtpPage = () => {
   const [otp, setOtp] = useState(new Array(4).fill("")); // Array to store OTP digits
   const [timer, setTimer] = useState(30); // Initialize timer with 30 seconds
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const inputRefs = useRef([]); // To store refs for each input field
-  const location = useLocation(); // Access the phone number passed from the login page
-  const navigate = useNavigate();
-  const phoneNumber = location.state?.phoneNumber;
+  const router = useRouter();
+  const phoneNumber = router.query.phoneNumber; // Access phone number from query parameter
 
   useEffect(() => {
     if (!phoneNumber) {
       // Redirect to login if no phone number is provided
-      navigate("/login");
+      router.push("/login");
     }
 
     const countdown = setInterval(() => {
@@ -29,7 +28,7 @@ const OtpPage = () => {
 
     // Cleanup interval when the component unmounts
     return () => clearInterval(countdown);
-  }, [phoneNumber, navigate]);
+  }, [phoneNumber, router]);
 
   const handleOtpChange = (value, index) => {
     if (isNaN(value)) return; // Ensure that only numbers are allowed
@@ -39,7 +38,7 @@ const OtpPage = () => {
     setOtp(newOtp);
 
     // Automatically move to the next input
-    if (value && index < 5) {
+    if (value && index < 3) {
       inputRefs.current[index + 1].focus();
     }
   };
@@ -62,7 +61,7 @@ const OtpPage = () => {
 
     // Implement OTP verification logic here using Firebase or your backend
     // On successful OTP verification, redirect to dashboard or desired page
-    navigate("/dashboard");
+    router.push("/dashboard");
   };
 
   return (

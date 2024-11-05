@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link
+import Link from "next/link"; // Import Link from Next.js
 
 const AuthPage = () => {
   const [email, setEmail] = useState("");
@@ -56,10 +56,11 @@ const AuthPage = () => {
         </form>
 
         <div className="text-center mt-6">
-          <Link to="/forgot-password" className="text-sm text-gray-600 hover:underline">
-            Forgot <span className="text-yellow-500">Password?</span>
+          <Link href="/forgot-password">
+            <a className="text-sm text-gray-600 hover:underline">
+              Forgot <span className="text-yellow-500">Password?</span>
+            </a>
           </Link>
-          
         </div>
       </div>
     </div>
